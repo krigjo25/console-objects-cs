@@ -17,13 +17,14 @@ namespace initializing_class
         protected private string __name__;
         protected private int __birthdate__;
         protected private int __socialnum__;
-        protected private string __address__;
+
         protected private string __county__;
+        protected private string __address__;
 
 
         //  Initializing a data structure
         protected private List<string> items;
-        protected private List<string> __hobbies__;
+        protected private string __hobbies__;
 
         //  Initialize properties
         public string Name
@@ -76,7 +77,7 @@ namespace initializing_class
             get { return __hobbies__; }
             set
             {
-
+                __hobbies__ = value;
             }
         }
         internal dynamic SetName(string arg)
@@ -95,7 +96,7 @@ namespace initializing_class
 
         internal dynamic GenerateHobbies(string arg)
         {
-            Hobbies.Add(arg);
+            __hobbies__ = arg;
             return 0;
         }
 
